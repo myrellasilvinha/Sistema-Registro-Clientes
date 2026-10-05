@@ -1,0 +1,568 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --primary-light: #eef2ff;
+
+    --background: #f5f7fb;
+    --card: #ffffff;
+
+    --text: #1f2937;
+    --text-light: #6b7280;
+
+    --border: #e5e7eb;
+
+    --success: #16a34a;
+    --success-bg: #dcfce7;
+
+    --danger: #dc2626;
+    --danger-bg: #fee2e2;
+
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+    --radius: 16px;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    background: var(--background);
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: var(--text);
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   TÍTULOS
+======================================== */
+
+h1 {
+    margin-bottom: 10px;
+
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+.dashboard-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    color: var(--primary);
+    background: var(--primary-light);
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+/* ========================================
+   CARD
+======================================== */
+
+.card {
+    padding: 32px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* ========================================
+   MENU / DASHBOARD
+======================================== */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.dashboard-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 24px;
+
+    color: var(--text);
+    text-decoration: none;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.dashboard-link:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 15px 35px rgba(99, 102, 241, 0.12);
+}
+
+.dashboard-link strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 17px;
+}
+
+.dashboard-link span {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.dashboard-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    color: var(--primary);
+
+    background: var(--primary-light);
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+
+/* ========================================
+   FORMULÁRIOS
+======================================== */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 15px;
+
+    font-size: 15px;
+    color: var(--text);
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+button,
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--primary);
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(99, 102, 241, 0.25);
+}
+
+.btn-secondary {
+    background: #f3f4f6;
+    color: var(--text);
+}
+
+.btn-secondary:hover {
+    background: #e5e7eb;
+    color: var(--text);
+
+    box-shadow: none;
+}
+
+
+/* ========================================
+   AÇÕES DO FORMULÁRIO
+======================================== */
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* ========================================
+   TABELA
+======================================== */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: #fff;
+}
+
+thead {
+    background: #f8fafc;
+}
+
+th {
+    padding: 16px;
+
+    text-align: left;
+
+    color: #475569;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 17px 16px;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ========================================
+   AÇÕES DA TABELA
+======================================== */
+
+.link-editar,
+.link-excluir {
+    display: inline-flex;
+
+    padding: 7px 11px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.link-editar {
+    color: #4f46e5;
+    background: #eef2ff;
+}
+
+.link-editar:hover {
+    background: #e0e7ff;
+}
+
+.link-excluir {
+    color: var(--danger);
+    background: var(--danger-bg);
+}
+
+.link-excluir:hover {
+    background: #fecaca;
+}
+
+
+/* ========================================
+   MENSAGENS
+======================================== */
+
+#msg-sucesso {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+    padding: 14px 16px;
+
+    color: #166534;
+
+    background: var(--success-bg);
+
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#msg-erro {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+    padding: 14px 16px;
+
+    color: #991b1b;
+
+    background: var(--danger-bg);
+
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* ========================================
+   CABEÇALHO DA PÁGINA
+======================================== */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin-bottom: 4px;
+}
+
+
+/* ========================================
+   LINK VOLTAR
+======================================== */
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 20px;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--primary);
+}
+
+
+/* ========================================
+   ESTADO VAZIO
+======================================== */
+
+.empty {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    color: var(--text-light);
+}
+
+.empty strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--text);
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn,
+    .form-actions button {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 13px 12px;
+    }
+}

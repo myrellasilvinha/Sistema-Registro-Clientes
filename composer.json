@@ -1,0 +1,13 @@
+{
+    "name": "myrella/cadastro-clientes",
+    "description": "Sistema de Cadastro de Clientes - CRUD em PHP com testes Selenium",
+    "require-dev": {
+        "php-webdriver/webdriver": "^1.15",
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
