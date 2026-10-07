@@ -1,20 +1,6 @@
 <?php
+require_once __DIR__ . '/../includes/auth_check.php';
 
-require_once __DIR__ . "/../servicos/ClienteServico.php";
-
-try {
-
-    $clienteServico = new ClienteServico();
-    $clientes = $clienteServico->buscar();
-
-    session_start();
-    $_SESSION['clientes'] = $clientes;
-    $_SESSION['msg'] = $_GET['msg'] ?? null;
-
-    header('Location: ../views/mostrarClientes.php');
-
-} catch (PDOException $erro) {
-    echo $erro->getMessage();
-}
-
-?>
+$msg = isset($_GET['msg']) ? '?msg=' . urlencode($_GET['msg']) : '';
+header('Location: ../views/mostrarClientes.php' . $msg);
+exit;

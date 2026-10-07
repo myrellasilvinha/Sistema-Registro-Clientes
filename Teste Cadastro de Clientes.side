@@ -1,0 +1,547 @@
+{
+  "id": "07b0b309-c733-4c8f-8325-12b47245751c",
+  "version": "2.0",
+  "name": "Teste Cadastro de Clientes",
+  "url": "http://localhost/cadastro-clientes/views/login.php",
+  "tests": [{
+    "id": "3d2b0559-0d5f-4c4c-99c5-65165bd1d3c2",
+    "name": "Login no sistema",
+    "commands": [{
+      "id": "73f6b3cc-c5c2-4650-8e13-7e7ed9e5f387",
+      "comment": "",
+      "command": "open",
+      "target": "/cadastro-clientes/views/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ae20e4b-4725-4141-874b-7e0e0428c2d6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x697",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4cfb9656-3106-47ee-a7e5-fc77f1e2879e",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "006ca210-6e68-4d7a-be89-4cf678b84d02",
+    "name": "Cadastrar cliente",
+    "commands": [{
+      "id": "718dcd08-2f7d-42f5-b2e8-a8ca656b4fc5",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/cadastro-clientes/views/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b13a2ea-406d-4371-adcb-c8dcd5fc090a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x697",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ca6b0d1-00de-4a36-a996-00b4b681d4e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c90c1e74-e09e-4124-afe1-ef0df7311cd2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Novo Cliente",
+      "targets": [
+        ["linkText=Novo Cliente", "linkText"],
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Novo Cliente')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '../views/formCadastrarCliente.php')]", "xpath:href"],
+        ["xpath=//div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Novo Cliente')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4517ec8-6d29-45b0-9257-401564781185",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form-cadastrar']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c964291c-973f-454a-a90e-2630453a92a8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "id=nome",
+      "targets": [],
+      "value": "Myrella"
+    }, {
+      "id": "de51a677-69ce-4dce-b15d-071448dfa840",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='form-cadastrar']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e848036-d782-47f6-aa70-a5c15df596f7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "id=email",
+      "targets": [],
+      "value": "myrella11@gmail.com"
+    }, {
+      "id": "74b7066b-1ae6-4261-9366-6a3a505c587b",
+      "comment": "",
+      "command": "click",
+      "target": "id=telefone",
+      "targets": [
+        ["id=telefone", "id"],
+        ["name=telefone", "name"],
+        ["css=#telefone", "css:finder"],
+        ["xpath=//input[@id='telefone']", "xpath:attributes"],
+        ["xpath=//form[@id='form-cadastrar']/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c02a8bf2-14a3-48a2-b678-4a55bb835505",
+      "comment": "",
+      "command": "executeScript",
+      "target": "id=telefone",
+      "targets": [],
+      "value": "(68) 99935-6935"
+    }, {
+      "id": "6f1e6fa7-11dc-452a-a7a1-7b3ee41e0355",
+      "comment": "",
+      "command": "click",
+      "target": "id=data_nascimento",
+      "targets": [
+        ["id=data_nascimento", "id"],
+        ["name=data_nascimento", "name"],
+        ["css=#data_nascimento", "css:finder"],
+        ["xpath=//input[@id='data_nascimento']", "xpath:attributes"],
+        ["xpath=//form[@id='form-cadastrar']/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b1d4ca4-fcab-4607-b75d-446938ffcd8e",
+      "comment": "",
+      "command": "click",
+      "target": "id=data_nascimento",
+      "targets": [
+        ["id=data_nascimento", "id"],
+        ["name=data_nascimento", "name"],
+        ["css=#data_nascimento", "css:finder"],
+        ["xpath=//input[@id='data_nascimento']", "xpath:attributes"],
+        ["xpath=//form[@id='form-cadastrar']/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4855b9ca-f557-40c7-8769-611319ed482b",
+      "comment": "",
+      "command": "type",
+      "target": "id=data_nascimento",
+      "targets": [
+        ["id=data_nascimento", "id"],
+        ["name=data_nascimento", "name"],
+        ["css=#data_nascimento", "css:finder"],
+        ["xpath=//input[@id='data_nascimento']", "xpath:attributes"],
+        ["xpath=//form[@id='form-cadastrar']/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2006-11-07"
+    }, {
+      "id": "c440abc0-2474-45d0-a267-0f7f2a49fdfc",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-salvar",
+      "targets": [
+        ["id=btn-salvar", "id"],
+        ["css=#btn-salvar", "css:finder"],
+        ["xpath=//button[@id='btn-salvar']", "xpath:attributes"],
+        ["xpath=//form[@id='form-cadastrar']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Salvar cliente')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e9361bd7-0f7e-4ef9-8910-71927c99d9fb",
+    "name": "Buscar cliente",
+    "commands": [{
+      "id": "dc8b4b97-1898-42ac-acea-4fb84b29c0c5",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/cadastro-clientes/views/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d574ec5b-9064-4428-a7c8-ec9ff383a227",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x697",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86308d45-ea28-4202-b282-d9124c70c143",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "452538eb-311b-45e6-b49f-6c73ec423522",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ver Clientes",
+      "targets": [
+        ["linkText=Ver Clientes", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Ver Clientes')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '../views/mostrarClientes.php')]", "xpath:href"],
+        ["xpath=//div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ver Clientes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b0eb1c0-7e78-4f16-a900-f34c4a818557",
+      "comment": "",
+      "command": "click",
+      "target": "name=busca",
+      "targets": [
+        ["name=busca", "name"],
+        ["css=.search-input", "css:finder"],
+        ["xpath=//input[@name='busca']", "xpath:attributes"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "562ae206-f2c7-43a0-a473-68976757d57d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "name=busca",
+      "targets": [],
+      "value": "Myrella"
+    }, {
+      "id": "57ec83ec-6d30-4862-a602-c5b68448e50a",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96cb66ab-66b8-479a-a7bd-6db2d50b9b44",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.table-wrapper",
+      "targets": [
+        ["css=.table-wrapper", "css:finder"],
+        ["xpath=//main/div[2]/div", "xpath:position"]
+      ],
+      "value": "410.1999969482422,486.0333251953125"
+    }, {
+      "id": "678de421-ac1c-47a4-9cad-735113270435",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.table-wrapper",
+      "targets": [
+        ["css=.table-wrapper", "css:finder"],
+        ["xpath=//main/div[2]/div", "xpath:position"]
+      ],
+      "value": "410.1999969482422,486.0333251953125"
+    }, {
+      "id": "9a78f274-8bcf-4a83-bad2-204f5d441f81",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.table-wrapper",
+      "targets": [
+        ["css=.table-wrapper", "css:finder"],
+        ["xpath=//main/div[2]/div", "xpath:position"]
+      ],
+      "value": "410.1999969482422,486.0333251953125"
+    }]
+  }, {
+    "id": "5c25e221-b107-4c9e-b99d-28120b69b616",
+    "name": "Editar cliente",
+    "commands": [{
+      "id": "8dfaf303-d0d1-41e9-a21e-08080fbd02bf",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/cadastro-clientes/views/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "243fbe2b-b99a-4bb7-9656-036326892695",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x697",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d56344a-24bd-46f5-99cc-5ca4b6549ecd",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79262480-f404-423f-a7bc-1252c3a2f62e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ver Clientes",
+      "targets": [
+        ["linkText=Ver Clientes", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Ver Clientes')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '../views/mostrarClientes.php')]", "xpath:href"],
+        ["xpath=//div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ver Clientes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac2a29ee-98c0-40ae-89f8-bd4daf4d7e11",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) > .col-email",
+      "targets": [
+        ["css=tr:nth-child(5) > .col-email", "css:finder"],
+        ["xpath=//table[@id='tabela-clientes']/tbody/tr[5]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'myrella07@gmail.com')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fc646ef-3af9-4500-981c-53229e3aaaa6",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.table-wrapper",
+      "targets": [
+        ["css=.table-wrapper", "css:finder"],
+        ["xpath=//main/div[2]/div", "xpath:position"]
+      ],
+      "value": "398.1999969482422,1098.0332641601562"
+    }, {
+      "id": "e28517b9-8e10-471a-9c3f-56ff0f6ba26e",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.table-wrapper",
+      "targets": [
+        ["css=.table-wrapper", "css:finder"],
+        ["xpath=//main/div[2]/div", "xpath:position"]
+      ],
+      "value": "398.1999969482422,1098.0332641601562"
+    }, {
+      "id": "7b2bbe6d-3924-4629-a9de-80db520b017e",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.table-wrapper",
+      "targets": [
+        ["css=.table-wrapper", "css:finder"],
+        ["xpath=//main/div[2]/div", "xpath:position"]
+      ],
+      "value": "398.1999969482422,1098.0332641601562"
+    }, {
+      "id": "76cba231-7f5f-463b-ab3c-9327c49f4da1",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) .link-editar .bi",
+      "targets": [
+        ["css=tr:nth-child(5) .link-editar .bi", "css:finder"],
+        ["xpath=//table[@id='tabela-clientes']/tbody/tr[5]/td[5]/div/a/span/i", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[5]/div/a/span/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "51993e21-e3b1-4054-80d7-4dc3a9b8778c",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form-editar']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44b1d7f6-2f9f-48c5-a783-0cb4615f2bc6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "id=nome",
+      "targets": [],
+      "value": "Myrella Da Silva"
+    }, {
+      "id": "e2af8e13-dedf-4206-9f81-d7d3a9de7589",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-atualizar",
+      "targets": [
+        ["id=btn-atualizar", "id"],
+        ["css=#btn-atualizar", "css:finder"],
+        ["xpath=//button[@id='btn-atualizar']", "xpath:attributes"],
+        ["xpath=//form[@id='form-editar']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Salvar alterações')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6f08d607-b1a0-4b5c-8a76-8045bff2787b",
+    "name": "Excluir cliente",
+    "commands": [{
+      "id": "e8268d91-f66c-4010-b105-070f162dc2fd",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/cadastro-clientes/views/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9bf7bc1-5e9f-4ef7-90a6-2ec29e9473c6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x697",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de573d86-a518-46f0-99e3-c548f44be369",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "935c6eef-1037-4da7-b9d9-0c40be48d5e4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ver Clientes",
+      "targets": [
+        ["linkText=Ver Clientes", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Ver Clientes')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '../views/mostrarClientes.php')]", "xpath:href"],
+        ["xpath=//div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ver Clientes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44364715-46cc-475d-95fa-0bf7babc466c",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.table-wrapper",
+      "targets": [
+        ["css=.table-wrapper", "css:finder"],
+        ["xpath=//main/div[2]/div", "xpath:position"]
+      ],
+      "value": "408.1999969482422,1076.0332641601562"
+    }, {
+      "id": "a33c5c06-e568-491b-ad30-6cea537aa72d",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.table-wrapper",
+      "targets": [
+        ["css=.table-wrapper", "css:finder"],
+        ["xpath=//main/div[2]/div", "xpath:position"]
+      ],
+      "value": "408.1999969482422,1076.0332641601562"
+    }, {
+      "id": "d19cba91-ae88-4add-adcd-5f6bc89bbd2f",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.table-wrapper",
+      "targets": [
+        ["css=.table-wrapper", "css:finder"],
+        ["xpath=//main/div[2]/div", "xpath:position"]
+      ],
+      "value": "408.1999969482422,1076.0332641601562"
+    }, {
+      "id": "7836e416-81f4-4c0c-be9f-5ef2a0a0100c",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76a0175c-3885-4895-9971-dc74f4cd6f71",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) .link-excluir",
+      "targets": [
+        ["css=tr:nth-child(5) .link-excluir", "css:finder"],
+        ["xpath=(//button[@type='submit'])[6]", "xpath:attributes"],
+        ["xpath=//table[@id='tabela-clientes']/tbody/tr[5]/td[5]/div/form/button", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[5]/div/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa829c9a-277a-470a-be3b-81086f84dc7c",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e8a824f8-180c-4436-8474-8d863416e54a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3d2b0559-0d5f-4c4c-99c5-65165bd1d3c2"]
+  }],
+  "urls": ["http://localhost/", "http://localhost/cadastro-clientes/views/login.php"],
+  "plugins": []
+}

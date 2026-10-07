@@ -1,0 +1,293 @@
+{
+  "id": "d3edfd39-f557-4303-9a1f-ae93487fac3f",
+  "version": "2.0",
+  "name": "cadastro-clientes",
+  "url": "http://localhost/cadastro-clientes/",
+  "tests": [
+    {
+      "id": "36da9625-6d84-446a-80a1-7893f8263c59",
+      "name": "Cadastrar cliente",
+      "commands": [
+        {
+          "id": "8c939690-f22f-4b7c-8a07-4c051fcc11a4",
+          "comment": "",
+          "command": "open",
+          "target": "views/login.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c696151d-a092-4ef8-a7cc-488ef8d283c1",
+          "comment": "",
+          "command": "click",
+          "target": "id=username",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "327bfd50-bfb5-4fdd-b206-aec3f31107c0",
+          "comment": "executeScript no lugar de type/sendKeys: ambos usam initKeyEvent, removido do Firefox 93+",
+          "command": "executeScript",
+          "target": "var e=document.getElementById('username');e.focus();e.value='admin';e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6b4f4e31-9d60-47f6-aa95-de9e7e22a8fb",
+          "comment": "",
+          "command": "click",
+          "target": "id=password",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "688a0cc9-ac40-403d-87f0-5a5e7daf7b17",
+          "comment": "executeScript no lugar de type/sendKeys: ambos usam initKeyEvent, removido do Firefox 93+",
+          "command": "executeScript",
+          "target": "var e=document.getElementById('password');e.focus();e.value='admin123';e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1d1ca3ee-14b5-493a-bfa1-aacbe1534ac5",
+          "comment": "",
+          "command": "click",
+          "target": "css=button[type=\"submit\"]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bb6f5cb8-27a5-40eb-b676-71191526c129",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=main",
+          "targets": [],
+          "value": "10000"
+        },
+        {
+          "id": "64c1f864-8128-420a-96a5-01595d40f578",
+          "comment": "",
+          "command": "open",
+          "target": "views/formCadastrarCliente.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d5b34099-e78f-469e-9fe2-43cb96ca8b91",
+          "comment": "",
+          "command": "waitForElementVisible",
+          "target": "id=nome",
+          "targets": [],
+          "value": "10000"
+        },
+        {
+          "id": "d242f6b6-d0e4-473f-af2b-5c4067e3ffee",
+          "comment": "sendKeys no lugar de type: o type usa initKeyEvent, removido do Firefox 93+",
+          "command": "click",
+          "target": "id=nome",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "97433cf2-f719-413d-b76a-8fefe093574a",
+          "comment": "executeScript no lugar de type/sendKeys: ambos usam initKeyEvent, removido do Firefox 93+",
+          "command": "executeScript",
+          "target": "var e=document.getElementById('nome');e.focus();e.value='Myrella Silva';e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ebdfbd13-a6fa-4feb-a6b8-736cceeea2b3",
+          "comment": "",
+          "command": "click",
+          "target": "id=email",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0d1ecbcb-124c-4ebc-8a13-339b21e20d06",
+          "comment": "executeScript no lugar de type/sendKeys: ambos usam initKeyEvent, removido do Firefox 93+",
+          "command": "executeScript",
+          "target": "var e=document.getElementById('email');e.focus();e.value='myrella.teste@exemplo.com';e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6c0f09ba-2526-4be3-b8f0-569bf8ecf6dc",
+          "comment": "",
+          "command": "click",
+          "target": "id=telefone",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e0b50dac-4f8f-4899-b4c5-c0d4d3db5dda",
+          "comment": "executeScript no lugar de type/sendKeys: ambos usam initKeyEvent, removido do Firefox 93+",
+          "command": "executeScript",
+          "target": "var e=document.getElementById('telefone');e.focus();e.value='68999990000';e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "556019ac-daed-431f-bf95-93ff8e32a85c",
+          "comment": "",
+          "command": "click",
+          "target": "id=btn-salvar",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "02666759-859a-4b8a-a02d-2933bb3d636f",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "id=tabela-clientes",
+          "targets": [],
+          "value": "10000"
+        },
+        {
+          "id": "beaa7257-da50-4d41-9e97-70e6ae8d13c8",
+          "comment": "",
+          "command": "assertText",
+          "target": "id=msg-sucesso",
+          "targets": [],
+          "value": "*Cliente cadastrado com sucesso*"
+        }
+      ]
+    },
+    {
+      "id": "7f221c32-4d44-4238-b40a-cdd634578554",
+      "name": "Buscar cliente",
+      "commands": [
+        {
+          "id": "8c939690-f22f-4b7c-8a07-4c051fcc11a4",
+          "comment": "",
+          "command": "open",
+          "target": "views/login.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c696151d-a092-4ef8-a7cc-488ef8d283c1",
+          "comment": "",
+          "command": "click",
+          "target": "id=username",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "327bfd50-bfb5-4fdd-b206-aec3f31107c0",
+          "comment": "executeScript no lugar de type/sendKeys: ambos usam initKeyEvent, removido do Firefox 93+",
+          "command": "executeScript",
+          "target": "var e=document.getElementById('username');e.focus();e.value='admin';e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6b4f4e31-9d60-47f6-aa95-de9e7e22a8fb",
+          "comment": "",
+          "command": "click",
+          "target": "id=password",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "688a0cc9-ac40-403d-87f0-5a5e7daf7b17",
+          "comment": "executeScript no lugar de type/sendKeys: ambos usam initKeyEvent, removido do Firefox 93+",
+          "command": "executeScript",
+          "target": "var e=document.getElementById('password');e.focus();e.value='admin123';e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1d1ca3ee-14b5-493a-bfa1-aacbe1534ac5",
+          "comment": "",
+          "command": "click",
+          "target": "css=button[type=\"submit\"]",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "bb6f5cb8-27a5-40eb-b676-71191526c129",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "css=main",
+          "targets": [],
+          "value": "10000"
+        },
+        {
+          "id": "a4db9781-b326-494c-8e04-c4909fcf45cf",
+          "comment": "",
+          "command": "open",
+          "target": "views/mostrarClientes.php",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a757ac86-581f-4b1a-ad7f-b0e3d16d5b1c",
+          "comment": "",
+          "command": "waitForElementVisible",
+          "target": "id=busca",
+          "targets": [],
+          "value": "10000"
+        },
+        {
+          "id": "a1f48c4c-e60d-40aa-b10b-10451df10eec",
+          "comment": "Não use selectFrame (busca não é frame) nem type/sendKeys (initKeyEvent no Firefox).",
+          "command": "click",
+          "target": "id=busca",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c2846ae0-4aa4-446c-a71a-23b783659d38",
+          "comment": "executeScript no lugar de type/sendKeys: ambos usam initKeyEvent, removido do Firefox 93+",
+          "command": "executeScript",
+          "target": "var e=document.getElementById('busca');e.focus();e.value='Myrella';e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6f2f68f8-943f-4947-a6c8-84c6f1e04552",
+          "comment": "",
+          "command": "click",
+          "target": "id=btn-buscar",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "864ed305-052d-4937-b5c5-deafa9e12ea0",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "id=tabela-clientes",
+          "targets": [],
+          "value": "10000"
+        },
+        {
+          "id": "5c77be5e-39c1-4677-9f7a-defed82e0897",
+          "comment": "",
+          "command": "assertText",
+          "target": "id=tabela-clientes",
+          "targets": [],
+          "value": "*Myrella*"
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "9ce46a7f-5d49-44ad-a385-36ae5a11f0c2",
+      "name": "Default Suite",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 300,
+      "tests": [
+        "36da9625-6d84-446a-80a1-7893f8263c59",
+        "7f221c32-4d44-4238-b40a-cdd634578554"
+      ]
+    }
+  ],
+  "urls": [
+    "http://localhost/cadastro-clientes/"
+  ],
+  "plugins": []
+}
